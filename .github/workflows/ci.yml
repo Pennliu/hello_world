@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: Set up Go
       uses: actions/setup-go@v4
@@ -24,8 +26,6 @@ jobs:
         pwd
         echo "=== Directory contents ==="
         ls -la
-        echo "=== Contents of cmd directory ==="
-        ls -la cmd/
         echo "=== Go environment ==="
         go version
         go env
@@ -37,7 +37,7 @@ jobs:
 
     - name: Run tests
       run: |
-        go test -v ./cmd/hello_world/...
+        go test -v ./...
         if [ $? -ne 0 ]; then
           echo "Tests failed"
           exit 1
@@ -54,6 +54,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: Set up Go
       uses: actions/setup-go@v4
@@ -66,15 +68,13 @@ jobs:
         pwd
         echo "=== Directory contents ==="
         ls -la
-        echo "=== Contents of cmd directory ==="
-        ls -la cmd/
         echo "=== Go environment ==="
         go version
         go env
 
     - name: Build
       run: |
-        go build -v ./cmd/hello_world
+        go build -v ./...
         if [ $? -ne 0 ]; then
           echo "Build failed"
           exit 1
