@@ -18,11 +18,23 @@ jobs:
       with:
         go-version: '1.21'
 
+    - name: Debug Go environment
+      run: |
+        go version
+        go env
+        pwd
+        ls -la
+
     - name: Install dependencies
       run: go mod download
 
     - name: Run tests
-      run: go test -v ./...
+      run: |
+        go test -v ./...
+        if [ $? -ne 0 ]; then
+          echo "Tests failed"
+          exit 1
+        fi
 
     - name: Run linter
       uses: golangci/golangci-lint-action@v3
@@ -41,8 +53,20 @@ jobs:
       with:
         go-version: '1.21'
 
+    - name: Debug Go environment
+      run: |
+        go version
+        go env
+        pwd
+        ls -la
+
     - name: Build
-      run: go build -v ./cmd/hello_world
+      run: |
+        go build -v ./cmd/hello_world
+        if [ $? -ne 0 ]; then
+          echo "Build failed"
+          exit 1
+        fi
 
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
