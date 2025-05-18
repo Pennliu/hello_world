@@ -20,12 +20,15 @@ jobs:
 
     - name: Debug Go environment
       run: |
+        echo "=== Current directory ==="
+        pwd
+        echo "=== Directory contents ==="
+        ls -la
+        echo "=== Contents of cmd directory ==="
+        ls -la cmd/
+        echo "=== Go environment ==="
         go version
         go env
-        pwd
-        ls -la
-        echo "=== Contents of cmd/hello_world ==="
-        ls -la cmd/hello_world/
 
     - name: Install dependencies
       run: |
@@ -34,8 +37,7 @@ jobs:
 
     - name: Run tests
       run: |
-        cd cmd/hello_world
-        go test -v .
+        go test -v ./cmd/hello_world/...
         if [ $? -ne 0 ]; then
           echo "Tests failed"
           exit 1
@@ -60,17 +62,19 @@ jobs:
 
     - name: Debug Go environment
       run: |
+        echo "=== Current directory ==="
+        pwd
+        echo "=== Directory contents ==="
+        ls -la
+        echo "=== Contents of cmd directory ==="
+        ls -la cmd/
+        echo "=== Go environment ==="
         go version
         go env
-        pwd
-        ls -la
-        echo "=== Contents of cmd/hello_world ==="
-        ls -la cmd/hello_world/
 
     - name: Build
       run: |
-        cd cmd/hello_world
-        go build -v .
+        go build -v ./cmd/hello_world
         if [ $? -ne 0 ]; then
           echo "Build failed"
           exit 1
@@ -80,4 +84,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: hello_world
-        path: cmd/hello_world/hello_world 
+        path: hello_world 
