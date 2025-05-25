@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/Pennliu/hello_world/branch/main/graph/badge.svg)](https://codecov.io/gh/Pennliu/hello_world)
+
 # Hello World
 
 A simple Go project demonstrating standard project layout and CI/CD setup.
