@@ -20,7 +20,7 @@ func TestPrintHello(t *testing.T) {
 
 	PrintHello()
 
-	w.Close()
+	_ = w.Close()
 	os.Stdout = old
 
 	var buf bytes.Buffer
