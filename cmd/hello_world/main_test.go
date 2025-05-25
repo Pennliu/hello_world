@@ -32,3 +32,9 @@ func TestPrintHello(t *testing.T) {
 		t.Errorf("expected %q, got %q", expected, output)
 	}
 }
+
+func BenchmarkPrintHello(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		PrintHello()
+	}
+}
