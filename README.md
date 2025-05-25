@@ -1,5 +1,12 @@
 ![Build Status](https://github.com/Pennliu/hello_world/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/gh/Pennliu/hello_world/branch/main/graph/badge.svg)](https://codecov.io/gh/Pennliu/hello_world)
+[![Go Report Card](https://goreportcard.com/badge/github.com/Pennliu/hello_world)](https://goreportcard.com/report/github.com/Pennliu/hello_world)
+![Go Version](https://img.shields.io/badge/go-1.24+-blue)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/Pennliu/hello_world.svg)](https://github.com/Pennliu/hello_world/releases)
+[![Issues](https://img.shields.io/github/issues/Pennliu/hello_world.svg)](https://github.com/Pennliu/hello_world/issues)
+[![PRs](https://img.shields.io/github/issues-pr/Pennliu/hello_world.svg)](https://github.com/Pennliu/hello_world/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/Pennliu/hello_world.svg)](https://github.com/Pennliu/hello_world/stargazers)
 
 # Hello World
 
