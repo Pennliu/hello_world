@@ -51,6 +51,11 @@ jobs:
         name: coverage-report
         path: coverage.out
 
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v4
+      with:
+        files: coverage.out
+
   build:
     name: Build
     needs: test
