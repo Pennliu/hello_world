@@ -19,7 +19,7 @@ A simple Go project demonstrating standard project layout and CI/CD setup.
 
 ## Prerequisites
 
-- Go 1.16 or higher
+- Go 1.24 or higher ([Download Go](https://go.dev/dl/))
 
 ## Getting Started
 
@@ -57,4 +57,4 @@ This project uses GitHub Actions for continuous integration and deployment. The 
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
