@@ -1,3 +1,4 @@
+![Build Status](https://github.com/Pennliu/hello_world/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/gh/Pennliu/hello_world/branch/main/graph/badge.svg)](https://codecov.io/gh/Pennliu/hello_world)
 
 # Hello World
