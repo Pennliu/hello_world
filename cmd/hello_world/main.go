@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"log"
 	"time"
@@ -8,11 +9,13 @@ import (
 
 func main() {
 	log.Println("Starting hello_world application...")
-	PrintHello()
+	greet := flag.String("greet", "Hello, World!", "custom greeting message")
+	flag.Parse()
+	PrintHello(*greet)
 }
 
-func PrintHello() {
-	fmt.Println("Hello, World!")
+func PrintHello(greet string) {
+	fmt.Println(greet)
 	// 新增功能：打印当前时间
 	fmt.Println("Current time:", time.Now().Format(time.RFC1123))
 }

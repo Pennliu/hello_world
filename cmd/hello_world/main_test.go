@@ -18,7 +18,7 @@ func TestPrintHello(t *testing.T) {
 	r, w, _ := os.Pipe()
 	os.Stdout = w
 
-	PrintHello()
+	PrintHello("Hello, World!")
 
 	_ = w.Close()
 	os.Stdout = old
@@ -35,6 +35,6 @@ func TestPrintHello(t *testing.T) {
 
 func BenchmarkPrintHello(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		PrintHello()
+		PrintHello("Hello, World!")
 	}
 }
