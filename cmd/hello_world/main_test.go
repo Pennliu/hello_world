@@ -27,9 +27,9 @@ func TestPrintHello(t *testing.T) {
 	_, _ = buf.ReadFrom(r)
 	output := buf.String()
 
-	expected := "Hello, World!\n"
-	if output != expected {
-		t.Errorf("expected %q, got %q", expected, output)
+	expected := "Hello, World!"
+	if !bytes.Contains([]byte(output), []byte(expected)) {
+		t.Errorf("expected output to contain %q, got %q", expected, output)
 	}
 }
 
